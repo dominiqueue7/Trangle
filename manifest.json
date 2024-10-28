@@ -2,8 +2,8 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "manifest_version": 2,
-  "name": "Add links to change languages on Google\u2122",
-  "version": "0.3",
+  "name": "Trangle",
+  "version": "0.4",
   "default_locale": "en",
   "description": "",
   "options_page": "options.html",
@@ -26,7 +26,7 @@
     "48": "icon-48.png"
   },
   "page_action": {
-    "default_icon": "icon-19.png",
+    "default_icon": "icon-32.png",
     "default_popup": "options.html"
   }
 }
