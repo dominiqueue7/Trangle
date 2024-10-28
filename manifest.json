@@ -1,20 +1,19 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
-
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Trangle",
   "version": "0.4",
   "default_locale": "en",
   "description": "",
   "options_page": "options.html",
   "background": {
-    "page": "background.html"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "all_frames": false,
       "js": ["script.js"],
-      "matches": ["<all_urls>"],
+      "matches": ["*://*/*"],
       "include_globs": ["*://*www.google*/search*"],
       "run_at": "document_end"
     }
@@ -25,8 +24,15 @@
     "32": "icon-32.png",
     "48": "icon-48.png"
   },
-  "page_action": {
+  "action": {
     "default_icon": "icon-32.png",
     "default_popup": "options.html"
-  }
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
 }
